@@ -15,6 +15,7 @@ for s in L:
     m = re.match(r"(\d)(-*)(\d)", s)
     n = int(m.group(1))
     assert len(m.group(2)) == n and int(m.group(3)) == n
+print("strings in the list have the right pattern\n")
 
 # convert to a multi-line string and replace all "00" by "*"
 inputstr = "\n".join(L)
@@ -23,6 +24,20 @@ str = re.sub(r"00", r"*", inputstr)
 print(f"str :\n{str}")
 
 # Verify that str has the correct pattern
+"""
+We check that a string is EITHER of the form (digit)(zero or more '-')(digit)
+OR has exactly one `*`. As we have a multi-line string, we use of `^...$`
+to delimit the start/end of the matching string.
+
+Altough we have 4 groups per match, we get either:
+* group(1)...group(3) when matching `n-..-n`, `group(4)` is empty
+* group(4) when matching `*`, group(1)...group(3) are empty.
+
+We expect to have exactly nsamples matches if the previous subsitution 
+is correct.
+"""
+print("\nCheck substitution:")
 m = re.findall(r"^(\d)(-*)(\d)$|^(\*{1})$", str, re.M)
 print(m)
 assert len(m) == nsamples
+print("check passed :)")

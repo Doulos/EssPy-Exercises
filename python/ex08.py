@@ -73,10 +73,10 @@ class Pixel(Coord):
 
 
 p = Pixel(1, 2, 3)
-p.print()  # should see: (1,2,3)
+p.print()  # should see: (1, 2), c=3<blue>
 assert p.get_color() == 3
 p.set_color(2)
 assert p.get_color() == 2
 assert p.complement().get_color() == 5
 p.setxy(3, 4)
-p.complement().print()  # Should see: (3,4,5)
+p.complement().print()  # Should see: (3,4), c=5<purple>
