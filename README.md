@@ -43,6 +43,6 @@ Check out the trainings below and **get project ready** in record time 😄
 If you're looking for an advanced training and take a deep diving into Python,
 this training is for you!
 
-- [AI and deep learning](https://www.doulos.com/training/ai-and-deep-learning/deep-learning/)<br/>
-If want to learn how to use AI, machine and deep learning for your products.
+- [AI & Deep Learning](https://www.doulos.com/training/ai-and-deep-learning/deep-learning/)<br/>
+If you want to learn how to use AI, machine and deep learning for your products.
 
